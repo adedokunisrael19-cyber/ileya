@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class BookSuggestionSystem{
 
-    static ArrayList<String> books=  new ArrayList<>();   
-    static Scanner input = new Scanner(System.in);
+    private static ArrayList<String> books=  new ArrayList<>();   
+    private static Scanner input = new Scanner(System.in);
     
 
      public static void main(String[] args){
@@ -20,7 +20,7 @@ public class BookSuggestionSystem{
         displayMenu();
         System.out.print("Enter aan operation");
         int option ;
-        option = input.nextInt();
+        option = Integer.parseInt(input.nextLine());
         switch(option) {
             case 1: suggestBooks(); break;
             case 2: addBooks(); break;
@@ -109,4 +109,34 @@ public class BookSuggestionSystem{
         }
     
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

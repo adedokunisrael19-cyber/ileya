@@ -2,7 +2,8 @@ public class CeasarCipher{
 
     public static String getEncryption(String word, int shift){
 
-      
+        word = "HELLO";
+        shift = 3;
         String encrypted = "";
     
         for(int index =0; index < word.length(); index++){
@@ -18,29 +19,5 @@ public class CeasarCipher{
                 encrypted += ch;
         } 
         return encrypted;
-    }
-
-
-    public static String getDecryption (String word, int shift){
-        
-         String decrypted = "";
-
-        
-        for(int index=0; index<word.length(); index++){
-            
-            char ch = word.charAt(index);
-            if(ch >= 'A' && ch <= 'Z'){
-                ch = (char)(ch-shift);
-
-             if(ch < 'A'){
-                ch = (char)(ch + 26);
-
-            }
-            }
-            decrypted += ch;
-
-        }
-
-        return decrypted;
     }
 }
